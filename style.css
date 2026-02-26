@@ -61,8 +61,26 @@ footer {
     margin-top: 30px;
 }
 
+/* Base container width */
+.products { max-width: 1200px; margin: 0 auto; }
+
 /* Responsive */
+/* medium screens (tablet) */
+@media (max-width: 900px) {
+    .card { width: 45%; }
+    .navbar input { width: 50%; }
+}
+
+/* small screens (mobile) */
 @media (max-width: 600px) {
     .products { flex-direction: column; align-items: center; }
-    .navbar input { width: 60%; }
+    .card { width: 90%; }
+
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    .navbar input { width: 100%; }
+    .navbar button { width: 100%; }
 }
